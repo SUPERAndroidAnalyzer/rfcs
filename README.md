@@ -83,7 +83,7 @@ eventual inclusion into SUPER.
   alternatives tend to be poorly-received.
 * Submit a pull request. As a pull request the RFC will receive design feedback from the larger
   community, and the author should be prepared to revise it in response.
-* The SUPER team triages RFC PRs. The team will will either close the PR (for RFCs that clearly
+* The SUPER team triages RFC PRs. The team will either close the PR (for RFCs that clearly
   will not be accepted) or assign it a *shepherd*. The shepherd is a trusted developer who is
   familiar with the RFC process, who will help to move the RFC forward, and ensure that the right
   people see and review it.
