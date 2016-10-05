@@ -83,10 +83,10 @@ eventual inclusion into SUPER.
   alternatives tend to be poorly-received.
 * Submit a pull request. As a pull request the RFC will receive design feedback from the larger
   community, and the author should be prepared to revise it in response.
-* The SUPER team triages RFC PRs. The team will either close the PR (for RFCs that clearly
-  will not be accepted) or assign it a *shepherd*. The shepherd is a trusted developer who is
-  familiar with the RFC process, who will help to move the RFC forward, and ensure that the right
-  people see and review it.
+* The SUPER team triages RFC PRs. The team will either close the PR (for RFCs that clearly will not
+  be accepted) or assign it a *shepherd*. The shepherd is a trusted developer who is familiar with
+  the RFC process, who will help to move the RFC forward, and ensure that the right people see and
+  review it.
 * Build consensus and integrate feedback. RFCs that have broad support are much more likely to make
   progress than those that don't receive any comments. The shepherd assigned to your RFC should
   help you get feedback from SUPER developers as well.
