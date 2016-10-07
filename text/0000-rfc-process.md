@@ -1,7 +1,7 @@
 - Feature Name: RFC Process
 - Start Date: 2016-10-02
 - RFC PR: (leave this empty)
-- SUPER Issue: (leave this empty)
+- Code Repo Issue: (leave this empty)
 
 # Summary
 
@@ -22,12 +22,12 @@ introduce features to SUPER.
 Many changes, including bug fixes and documentation improvements can be implemented and reviewed
 via the normal GitHub pull request workflow.
 
-Some changes though are "substantial", and we ask that these be put through a bit of a design
+Some changes though are *substantial*, and we ask that these be put through a bit of a design
 process and produce a consensus among the SUPER community and the SUPER team.
 
 ## When you need to follow this process
 
-You need to follow this process if you intend to make "substantial" changes to SUPER, any of its
+You need to follow this process if you intend to make *substantial* changes to SUPER, any of its
 surrounding libraries, or the RFC process itself. What constitutes a "substantial" change is
 evolving based on community norms and varies depending on what part of the ecosystem you are
 proposing to change, but may include the following:
@@ -63,7 +63,8 @@ eventual inclusion into SUPER.
   demonstrate understanding of the impact of the design, or are disingenuous about the drawbacks or
   alternatives tend to be poorly-received.
 * Submit a pull request. As a pull request the RFC will receive design feedback from the larger
-  community, and the author should be prepared to revise it in response.
+  community, and the author should be prepared to revise it in response. If you are willing to
+  implement the RFC, you should note it in the pull request message.
 * The SUPER team triages RFC PRs. The team will either close the PR (for RFCs that clearly will not
   be accepted) or assign it a *shepherd*. The shepherd is a trusted developer who is familiar with
   the RFC process, who will help to move the RFC forward, and ensure that the right people see and
@@ -84,10 +85,12 @@ eventual inclusion into SUPER.
   community to comment on the PR and is a reminder for all members of the team to be aware of the
   RFC.
 * The FCP lasts one week. It may be extended if consensus between team members cannot be reached.
-  At the end of the FCP,  the team will either accept the RFC by merging the pull request,
-  assigning the RFC a number (corresponding to the pull request number), at which point the RFC is
-  'active', or reject it by closing the pull request. How exactly the SUPER team decides on an RFC
-  is up to the team.
+  At the end of the FCP, the team will either accept the RFC by merging the pull request, assigning
+  the RFC a number (corresponding to the pull request number) and adding the `Active` label to it,
+  at which point the RFC is *active*, or reject it by closing the pull request and adding the
+  `Rejected` label to it. How exactly the SUPER team decides on an RFC is up to the team.
+* Once the RFC is implemented, the pull request will change its `Active` label for an `Implemented`
+  label.
 
 ## The role of the shepherd
 
@@ -103,10 +106,10 @@ be consensus but discussion has stalled. In this case, the SUPER team will make 
 
 ## The RFC life-cycle
 
-Once an RFC becomes active then authors may implement it and submit the feature as a pull request
-to the SUPER repo. Being 'active' is not a rubber stamp, and in particular still does not mean the
-feature will ultimately be merged; it does mean that in principle all the major stakeholders have
-agreed to the feature and are amenable to merging it.
+Once an RFC is accepted, it will became *active*. Once it becomes active then authors may implement
+it and submit the feature as a pull request to the code repo. Being *active* is not a rubber stamp,
+and in particular still does not mean the feature will ultimately be merged; it does mean that in
+principle all the major stakeholders have agreed to the feature and are amenable to merging it.
 
 Furthermore, the fact that a given RFC has been accepted and is 'active' implies nothing about what
 priority is assigned to its implementation, nor does it imply anything about whether a SUPER
@@ -115,16 +118,16 @@ the author of the RFC also write the implementation, it is by far the most effec
 RFC through to completion: authors should not expect that other project developers will take on
 responsibility for implementing their accepted feature.
 
-Modifications to active RFC's can be done in follow-up PR's. We strive to write each RFC in a
-manner that it will reflect the final design of the feature; but the nature of the process means
-that we cannot expect every merged RFC to actually reflect what the end result will be at the time
-of the next major release.
+Modifications to active RFCs can be done in follow-up PRs. We strive to write each RFC in a manner
+that it will reflect the final design of the feature; but the nature of the process means that we
+cannot expect every merged RFC to actually reflect what the end result will be at the time of the
+next major release.
 
 In general, once accepted, RFCs should not be substantially changed. Only very minor changes should
 be submitted as amendments. More substantial changes should be new RFCs, with a note added to the
 original RFC. Exactly what counts as a "very minor change" is up to the SUPER team to decide.
 
-## Reviewing RFC's
+## Reviewing RFCs
 
 While the RFC PR is up, the shepherd may schedule meetings with the author and/or relevant
 stakeholders to discuss the issues in greater detail, and in some cases the topic may be discussed
@@ -139,22 +142,22 @@ rationale for the decision.
 
 ## Implementing an RFC
 
-Some accepted RFC's represent vital features that need to be implemented right away. Other accepted
-RFC's can represent features that can wait until some arbitrary developer feels like doing the
-work. Every accepted RFC has an associated issue tracking its implementation in the SUPER
+Some accepted RFCs represent vital features that need to be implemented right away. Other accepted
+RFCs can represent features that can wait until some arbitrary developer feels like doing the work.
+Every accepted RFC has an associated issue tracking its implementation in the relevant code
 repository; thus that associated issue can be assigned a priority via the triage process that the
-team uses for all issues in the SUPER repository.
+team uses for all issues in the code repository, by assigning a relevant label.
 
 The author of an RFC is not obligated to implement it. Of course, the RFC author (like any other
 developer) is welcome to post an implementation for review after the RFC has been accepted.
 
-If you are interested in working on the implementation for an 'active' RFC, but cannot determine if
+If you are interested in working on the implementation for an *active* RFC, but cannot determine if
 someone else is already working on it, feel free to ask (e.g. by leaving a comment on the
 associated issue).
 
 ## RFC Postponement
 
-Some RFC pull requests are tagged with the 'postponed' label when they are closed (as part of the
+Some RFC pull requests are tagged with the `Postponed` label when they are closed (as part of the
 rejection process). An RFC closed with "postponed" is marked as such because we want neither to
 think about evaluating the proposal nor about implementing the described feature until some time in
 the future, and we believe that we can afford to wait until then to do so. Postponed PRs may be
@@ -179,11 +182,11 @@ improve over the informal process in the following ways:
 As an alternative alternative, we could adopt an even stricter RFC process than the one proposed
 here. If desired, we should likely look to Python's [PEP] process for inspiration.
 
+[PEP]: http://legacy.python.org/dev/peps/pep-0001/
+
 # Unresolved questions
 
 1. Does this RFC strike a favorable balance between formality and agility?
 2. Does this RFC successfully address the aforementioned issues with the current
    informal issue-based process?
 3. Should we retain rejected RFCs in the archive?
-
-[PEP]: http://legacy.python.org/dev/peps/pep-0001/
