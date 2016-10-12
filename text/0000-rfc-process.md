@@ -1,5 +1,23 @@
-# SUPER RFCs
-[SUPER RFCs]: #super-rfcs
+- Feature Name: RFC Process
+- Start Date: 2016-10-02
+- RFC PR: (leave this empty)
+- Code Repo Issue: (leave this empty)
+
+# Summary
+
+The "RFC" (request for comments) process is intended to provide a consistent and controlled path
+for new features to enter the software, or its surrounding libraries, so that all stakeholders can
+be confident about the direction the software is evolving in.
+
+# Motivation
+
+The freewheeling way that we add new features to SUPER has been good for early development, but for
+SUPER to become a mature platform we need to develop some more self-discipline when it comes to
+changing the system. This is a proposal for a more principled RFC process to make it a more
+integral part of the overall development process, and one that is followed consistently to
+introduce features to SUPER.
+
+# Detailed design
 
 Many changes, including bug fixes and documentation improvements can be implemented and reviewed
 via the normal GitHub pull request workflow.
@@ -7,27 +25,7 @@ via the normal GitHub pull request workflow.
 Some changes though are *substantial*, and we ask that these be put through a bit of a design
 process and produce a consensus among the SUPER community and the SUPER team.
 
-The "RFC" (request for comments) process is intended to provide a consistent and controlled path
-for new features to enter the software, or its surrounding libraries, so that all stakeholders can
-be confident about the direction the software is evolving in.
-
-## Table of Contents
-[Table of Contents]: #table-of-contents
-* [Opening](#super-rfcs)
-* [Table of Contents]
-* [When you need to follow this process]
-* [Before creating an RFC]
-* [What the process is]
-* [The role of the shepherd]
-* [The RFC life-cycle]
-* [Reviewing RFCs]
-* [Implementing an RFC]
-* [RFC Postponement]
-* [Help this is all too informal!]
-
-
 ## When you need to follow this process
-[When you need to follow this process]: #when-you-need-to-follow-this-process
 
 You need to follow this process if you intend to make *substantial* changes to SUPER, any of its
 surrounding libraries, or the RFC process itself. What constitutes a "substantial" change is
@@ -52,24 +50,7 @@ Some changes do not require an RFC:
 If you submit a pull request to implement a new feature without going through the RFC process, it
 may be closed with a polite request to submit an RFC first.
 
-## Before creating an RFC
-[Before creating an RFC]: #before-creating-an-rfc
-
-A hastily-proposed RFC can hurt its chances of acceptance. Low quality proposals, proposals for
-previously-rejected features, or those that don't fit into the near-term roadmap, may be quickly
-rejected, which can be demotivating for the unprepared contributor. Laying some groundwork ahead of
-the RFC can make the process smoother.
-
-Although there is no single way to prepare for submitting an RFC, it is generally a good idea to
-pursue feedback from other project developers beforehand, to ascertain that the RFC may be
-desirable: having a consistent impact on the project requires concerted effort toward
-consensus-building.
-
-As a rule of thumb, receiving encouraging feedback from long-standing project developers, and
-particularly members of the SUPER team is a good indication that the RFC is worth pursuing.
-
 ## What the process is
-[What the process is]: #what-the-process-is
 
 In short, to get a major feature added to SUPER, one must first get the RFC merged into the RFC
 repo as a markdown file. At that point the RFC is 'active' and may be implemented with the goal of
@@ -112,7 +93,6 @@ eventual inclusion into SUPER.
   label.
 
 ## The role of the shepherd
-[The role of the shepherd]: #the-role-of-the-shepherd
 
 During triage, every RFC will either be closed or assigned a shepherd from the team. The role of
 the shepherd is to move the RFC through the process. This starts with simply reading the RFC in
@@ -125,7 +105,6 @@ accept the RFC should usually be obvious from the RFC discussion thread. On occa
 be consensus but discussion has stalled. In this case, the SUPER team will make a decision.
 
 ## The RFC life-cycle
-[The RFC life-cycle]: #the-rfc-life-cycle
 
 Once an RFC is accepted, it will became *active*. Once it becomes active then authors may implement
 it and submit the feature as a pull request to the code repo. Being *active* is not a rubber stamp,
@@ -149,7 +128,6 @@ be submitted as amendments. More substantial changes should be new RFCs, with a 
 original RFC. Exactly what counts as a "very minor change" is up to the SUPER team to decide.
 
 ## Reviewing RFCs
-[Reviewing RFCs]: #reviewing-rfcs
 
 While the RFC PR is up, the shepherd may schedule meetings with the author and/or relevant
 stakeholders to discuss the issues in greater detail, and in some cases the topic may be discussed
@@ -163,23 +141,21 @@ reasoning is not clear from the discussion in thread, the team will add a commen
 rationale for the decision.
 
 ## Implementing an RFC
-[Implementing an RFC]: #implementing-an-rfc
 
 Some accepted RFCs represent vital features that need to be implemented right away. Other accepted
 RFCs can represent features that can wait until some arbitrary developer feels like doing the work.
-Every accepted RFC has an associated issue tracking its implementation in the code repository; thus
-that associated issue can be assigned a priority via the triage process that the team uses for all
-issues in the code repository.
+Every accepted RFC has an associated issue tracking its implementation in the relevant code
+repository; thus that associated issue can be assigned a priority via the triage process that the
+team uses for all issues in the code repository, by assigning a relevant label.
 
 The author of an RFC is not obligated to implement it. Of course, the RFC author (like any other
 developer) is welcome to post an implementation for review after the RFC has been accepted.
 
-If you are interested in working on the implementation for an 'active' RFC, but cannot determine if
+If you are interested in working on the implementation for an *active* RFC, but cannot determine if
 someone else is already working on it, feel free to ask (e.g. by leaving a comment on the
 associated issue).
 
 ## RFC Postponement
-[RFC Postponement]: #rfc-postponement
 
 Some RFC pull requests are tagged with the `Postponed` label when they are closed (as part of the
 rejection process). An RFC closed with "postponed" is marked as such because we want neither to
@@ -193,9 +169,24 @@ evaluation, namely the round of "do we think we would ever possibly consider mak
 outlined in the RFC pull request, or some semi-obvious variation of it." (When the answer to the
 latter question is "no", then the appropriate response is to close the RFC, not postpone it.)
 
-### Help this is all too informal!
-[Help this is all too informal!]: #help-this-is-all-too-informal
+# Alternatives
 
-The process is intended to be as lightweight as reasonable for the present circumstances. As usual,
-we are trying to let the process be driven by consensus and community norms, not impose more
-structure than necessary.
+Retain the current informal issue-based process. The newly proposed RFC process is designed to
+improve over the informal process in the following ways:
+
+* Discourage unactionable or vague requests.
+* Ensure that all serious RFCs are considered equally.
+* Give confidence to those with a stake in SUPER's development that they understand why new
+  features are being merged.
+
+As an alternative alternative, we could adopt an even stricter RFC process than the one proposed
+here. If desired, we should likely look to Python's [PEP] process for inspiration.
+
+[PEP]: http://legacy.python.org/dev/peps/pep-0001/
+
+# Unresolved questions
+
+1. Does this RFC strike a favorable balance between formality and agility?
+2. Does this RFC successfully address the aforementioned issues with the current
+   informal issue-based process?
+3. Should we retain rejected RFCs in the archive?
