@@ -1,7 +1,7 @@
 - Feature Name: RFC Process
 - Start Date: 2016-10-02
-- RFC PR: (leave this empty)
-- Code Repo Issue: (leave this empty)
+- RFC PR: [rfcs/#1](https://github.com/SUPERAndroidAnalyzer/rfcs/pull/1)
+- Code Repo Issue: N/A
 
 # Summary
 

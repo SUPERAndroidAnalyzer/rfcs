@@ -1,7 +1,7 @@
 - Feature Name: SUPER Release procedure
 - Start Date: 2016-10-07
-- RFC PR: (leave this empty)
-- Code Repo Issue: (leave this empty)
+- RFC PR: [rfcs/#2](https://github.com/SUPERAndroidAnalyzer/rfcs/pull/2)
+- Code Repo Issue: [SUPER/#68](https://github.com/SUPERAndroidAnalyzer/super/issues/68)
 
 # Summary
 [summary]: #summary
